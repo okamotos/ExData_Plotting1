@@ -29,7 +29,7 @@ createPlot4 <- function(file='household_power_consumption.txt', plotfile='plot4.
        ylab='Energy sub metering', xlab='')
   lines(data$DateTime, data$Sub_metering_2, main='', type='l', col='red')
   lines(data$DateTime, data$Sub_metering_3, main='', type='l', col='blue')
-  legend('topright', col=c('black', 'red', 'blue'), lty=1,
+  legend('topright', col=c('black', 'red', 'blue'), bty='n', lty=1,
          legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
   # create the fourth time plot of global reactive power
   plot(data$DateTime, data$Global_reactive_power, main='', type='l', 
