@@ -20,10 +20,10 @@ createPlot4 <- function(file='household_power_consumption.txt', plotfile='plot4.
   par(mfrow = c(2, 2))
   # create the first time plot of global active power
   plot(data$DateTime, data$Global_active_power, main='', type='l', 
-       ylab='Global Active Power (kilowatts)', xlab='')
+       ylab='Global Active Power', xlab='')
   # create the second time plot of Voltage
   plot(data$DateTime, data$Voltage, main='', type='l', 
-       ylab='Voltage', xlab='')
+       ylab='Voltage', xlab='datetime')
   # create the third time plot of sub metering
   plot(data$DateTime, data$Sub_metering_1, main='', type='l',
        ylab='Energy sub metering', xlab='')
@@ -33,6 +33,6 @@ createPlot4 <- function(file='household_power_consumption.txt', plotfile='plot4.
          legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'))
   # create the fourth time plot of global reactive power
   plot(data$DateTime, data$Global_reactive_power, main='', type='l', 
-       ylab='Global Reactive Power', xlab='')
+       ylab='Global_reactive_power', xlab='datetime')
   invisible(dev.off())
 }
