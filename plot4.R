@@ -1,4 +1,8 @@
-# Creates plot4, 
+# Creates plot4 with four subplots for the first two days of February 2007: 
+#   * a line plot of global active power
+#   * a line plot of voltage
+#   * a line plot of three submetering readings
+#   * a line plot of global reactive power
 createPlot4 <- function(file='household_power_consumption.txt', plotfile='plot4.png') {
   data <- read.csv(file, sep=';', na.strings="?", 
                    colClasses=c('character', 'character', rep('numeric', 7)))
